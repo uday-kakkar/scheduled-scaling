@@ -16,17 +16,3 @@ spec:
    - name: "scale-up"
      schedule: "01 */1 * * * *"
      targetSize: 3
-spec:
-   scaleTargetRef:
-      apiVersion: apps/v1beta2
-      kind: Deployment
-      name: sample2-microservice
-   jobs:
-   - name: "scale-down"
-     schedule: "30 */1 * * * *"
-     targetSize: 1
-     runOnce: true
-   - name: "scale-up"
-     schedule: "01 */1 * * * *"
-     targetSize: 3
-     runOnce: true
