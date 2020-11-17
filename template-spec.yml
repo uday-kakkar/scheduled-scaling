@@ -1,0 +1,18 @@
+apiVersion: autoscaling.alibabacloud.com/v1beta1
+kind: CronHorizontalPodAutoscaler
+metadata:
+  labels:
+    controller-tools.k8s.io: "1.0"
+  name: cronhpa-sample1-microservice
+spec:
+   scaleTargetRef:
+      apiVersion: apps/v1beta2
+      kind: Deployment
+      name: {{MYSERVICE}
+   jobs:
+   - name: "scale-down"
+     schedule: {{MYSCHEDULESCALEDOWN}}
+     targetSize: 1
+   - name: "scale-up"
+     schedule: {{MYSCHEDULESCALEUP}}
+     targetSize: 3
