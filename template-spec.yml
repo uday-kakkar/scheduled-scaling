@@ -8,11 +8,13 @@ spec:
    scaleTargetRef:
       apiVersion: apps/v1beta2
       kind: Deployment
-      name: "{{MYSERVICE}}"
+      name: {{MYSERVICE}}
    jobs:
    - name: "scale-down"
      schedule: "{{MYSCHEDULESCALEDOWN}}"
-     targetSize: 1
+     targetSize: {{MYDOWNTARGET}}
+     runOnce: {{runONCE}}
    - name: "scale-up"
      schedule: "{{MYSCHEDULESCALEUP}}"
-     targetSize: 3
+     targetSize: {{MYUPTARGET}}
+     runOnce: {{runONCE}}
