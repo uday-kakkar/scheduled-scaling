@@ -8,7 +8,7 @@ spec:
    scaleTargetRef:
       apiVersion: apps/v1beta2
       kind: Deployment
-      name: {{MYSERVICE}
+      name: {{MYSERVICE}}
    jobs:
    - name: "scale-down"
      schedule: {{MYSCHEDULESCALEDOWN}}
