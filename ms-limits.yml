@@ -1,0 +1,9 @@
+ms1:
+  minReplica:3
+  maxreplica:50
+ms2:
+  minReplica:3
+  maxreplica:50
+ms3:
+  minReplica:3
+  maxreplica:50
