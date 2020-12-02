@@ -1,9 +1,7 @@
-apiVersion: autoscaling.alibabacloud.com/v1beta1
-kind: CronHorizontalPodAutoscaler
+apiVersion: "scaling.k8s.restdev.com/v1alpha1"
+kind: ScheduledScaler
 metadata:
-  labels:
-    controller-tools.k8s.io: "1.0"
-  name: cronhpa-sample1-microservice
+  name: {{MYSCALER}}
 spec:
   timeZone: America/New_York
   target:
@@ -25,7 +23,7 @@ kind: CronHorizontalPodAutoscaler
 metadata:
   labels:
     controller-tools.k8s.io: "1.0"
-  name: cronhpa-sample1-microservice
+  name: {{MYCRONHPASCALER}}
 spec:
    scaleTargetRef:
       apiVersion: apps/v1beta2
