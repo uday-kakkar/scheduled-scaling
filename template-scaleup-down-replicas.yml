@@ -1,7 +1,7 @@
 apiVersion: "scaling.k8s.restdev.com/v1alpha1"
 kind: ScheduledScaler
 metadata:
-  name: my-scheduled-scaler-1
+  name: {{MYSCALER}}
 spec:
   timeZone: America/New_York
   target:

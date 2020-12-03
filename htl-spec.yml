@@ -1,0 +1,6 @@
+ms1:
+  minReplica: 30
+ms2:
+  minReplica: 30
+ms3:
+  minReplica: 30
